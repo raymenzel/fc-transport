@@ -1,0 +1,5 @@
+square-wave
+wave-animator/build
+*.egg-info
+*.csv
+*.gif
