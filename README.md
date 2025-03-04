@@ -41,9 +41,7 @@ in a virtual environment, run (if in bash):
 ```
 $ python3 -m venv env
 $ source env/bin/activate # if in bash
-$ cd wave-animator
-$ pip install .
-$ cd ..
+$ pip install ./wave-animator
 ```
 
 The gif can be created by running `wave-animator` and passing in the `wave-output.csv`
@@ -52,3 +50,5 @@ as the first argument"
 ```
 $ wave-animator wave-output.csv
 ```
+
+![square-wave-transport](./docs/wave.gif)
