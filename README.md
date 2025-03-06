@@ -45,7 +45,7 @@ $ pip install ./wave-animator
 ```
 
 The gif can be created by running `wave-animator` and passing in the `wave-output.csv`
-as the first argument"
+as the first argument.
 
 ```
 $ wave-animator wave-output.csv
