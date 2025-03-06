@@ -34,3 +34,5 @@ if [ ! -f "wave.gif" ]; then
   echo "wave-animator failed to produce the output csv file."
   exit 1
 fi
+
+echo "All tests passed."

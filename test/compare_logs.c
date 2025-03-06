@@ -112,9 +112,15 @@ int main(int argc, char ** argv)
         memset(tokens_b[i], 0, sizeof(char)*256);
     }
 
-    while(fgets(line_a, 256, log1) != NULL && fgets(line_b, 256, log2) != NULL)
+    while (1)
     {
-        if (line_a == NULL || line_b == NULL)
+        char * s1 = fgets(line_a, 256, log1);
+        char * s2 = fgets(line_b, 256, log2);
+        if (s1 == NULL && s2 == NULL)
+        {
+            break;
+        }
+        if (s1 == NULL || s2 == NULL)
         {
             fprintf(stderr, "Error: the log files have different numbers of lines.\n");
             cleanup(log1, log2);
