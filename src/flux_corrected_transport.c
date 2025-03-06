@@ -8,6 +8,10 @@
 #define MIN(x, y) (((x) < (y)) ? (x) : (y))
 
 
+
+/* Transport quantities using hte flux-corrected method described in:
+   Boris, J. P., & Book, D. L. (1976). Solution of continuity equations
+   by the method of flux-corrected transport. Controlled Fusion, 85-129*/
 void flux_corr_method(
     double * u, /* Quantity to tranport.*/
     double * v, /* Velocity.*/
@@ -18,6 +22,7 @@ void flux_corr_method(
 )
 {
     /* Calculate the nondimensional transport coefficients at the cell interfaces. */
+    /* Assume fixed boundaries.*/
     double epsilon[arrlen + 1];
     epsilon[0] = v[0]*dt/dx;
     epsilon[arrlen] = v[arrlen - 1]*dt/dx;
