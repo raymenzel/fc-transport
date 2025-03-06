@@ -19,7 +19,9 @@ def animate(frame, axis):
     plt.cla()
     axis.set_title(f"Time: {time:04.2f} s", fontfamily="monospace")
     axis.set_xlim(0, 1000)
+    axis.set_xlabel("x [meters]")
     axis.set_ylim(0, 30)
+    axis.set_xlabel("Density [kg m-3]")
     line, = axis.plot(x, y)
     return line,
 

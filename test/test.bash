@@ -21,3 +21,16 @@ if [ "$?" -ne "0" ]; then
   echo "square-wave did not produce the expected data."
   exit 1
 fi
+
+# Generate a .gif
+wave-animator $test_directory/../wave-output.csv
+if [ "$?" -ne "0" ]; then
+  echo "wave-animator failed."
+  exit 1
+fi
+
+# Make sure it created the gif.
+if [ ! -f "wave.gif" ]; then
+  echo "wave-animator failed to produce the output csv file."
+  exit 1
+fi
